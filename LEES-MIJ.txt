@@ -1,0 +1,75 @@
+Jamey Vault — PWA (app voor je iPhone)
+=======================================
+
+Deze map bevat een installeerbare web-app. Je hoeft niets aan de bestanden te
+wijzigen — alleen de map online zetten via Vercel.
+
+
+==============================================================
+ONLINE ZETTEN MET VERCEL
+==============================================================
+Je wilt in de toekomst updaten, daarom is de GitHub-route (A) aanbevolen:
+één keer instellen, en daarna publiceert elke wijziging zichzelf automatisch.
+Route B (terminal) is sneller voor eenmalig, maar minder handig voor updates.
+
+
+ROUTE A — via GitHub (aanbevolen, geen terminal, auto-updates)
+--------------------------------------------------------------
+1. Maak een gratis account op https://github.com
+2. Klik op "New" om een nieuwe repository te maken. Geef 'm een naam
+   (bijv. "jamey-vault"), zet 'm op Private, en klik "Create repository".
+3. Op de repo-pagina: klik "Add file" -> "Upload files".
+   Sleep ALLE bestanden uit deze map erin (index.html, manifest.json, sw.js,
+   icon-192.png, icon-512.png, icon-512-maskable.png) en klik "Commit changes".
+4. Ga naar https://vercel.com en log in met je GitHub-account.
+5. Klik "Add New..." -> "Project" -> kies je "jamey-vault" repo -> "Import".
+6. Laat alle instellingen op standaard staan en klik "Deploy".
+7. Na ~30 sec krijg je een adres, bijv. https://jamey-vault.vercel.app
+
+   UPDATEN LATER: wijzig/vervang een bestand in GitHub (Add file -> Upload
+   files, of de potlood-knop om te bewerken). Vercel publiceert de nieuwe
+   versie dan automatisch binnen een minuut. Niets extra's nodig.
+
+
+ROUTE B — via de terminal (snel, eenmalig)
+------------------------------------------
+1. Installeer Node.js via https://nodejs.org (LTS-versie).
+2. Open Terminal en installeer de Vercel-tool:
+       npm i -g vercel
+3. Ga naar deze map (sleep de map achter "cd " voor het juiste pad):
+       cd /pad/naar/jamey-vault-pwa
+4. Typ:
+       vercel
+   Log in als daarom gevraagd wordt en accepteer de standaard-antwoorden
+   (Enter blijven drukken is prima).
+5. Je krijgt een adres, bijv. https://jamey-vault.vercel.app
+
+   UPDATEN LATER: pas de bestanden aan en typ opnieuw "vercel --prod" in
+   dezelfde map.
+
+
+==============================================================
+OP JE IPHONE ALS APP ZETTEN
+==============================================================
+1. Open je Vercel-adres in SAFARI op je iPhone.
+2. Tik onderaan op de deel-knop (vierkantje met pijl omhoog).
+3. Kies "Zet op beginscherm".
+4. Er verschijnt een JV-icoon dat opent als een echte app (schermvullend,
+   zonder browser-balk).
+
+
+==============================================================
+BELANGRIJK OVER JE DATA
+==============================================================
+- Je gegevens worden bewaard op je telefoon, gekoppeld aan dat ene webadres.
+- Gebruik dus steeds hetzelfde adres, dan blijft alles staan.
+- Als je de app update (nieuwe versie uploaden), blijft je ingevulde data
+  gewoon staan — die zit in je telefoon, niet in de bestanden.
+- Data synchroniseert NIET tussen telefoon en laptop. Wil je dat later wel,
+  dan is de cloud-versie (zie het handoff-pakket) de volgende stap.
+
+Bestanden in deze map:
+- index.html               de app zelf
+- manifest.json            maakt het installeerbaar (naam, icoon, kleuren)
+- sw.js                    zorgt dat de app ook offline werkt
+- icon-192/512(.png)       het app-icoon
